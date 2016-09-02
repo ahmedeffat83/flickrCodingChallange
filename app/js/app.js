@@ -1,7 +1,7 @@
 var flickr = angular.module('flickr', ['ui.router'])
-
-
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+
+	'use strict';
 
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
