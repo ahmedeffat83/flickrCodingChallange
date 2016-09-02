@@ -7,10 +7,26 @@
 
     <div ng-if="results">
         <div>
-            <button ng-click="sortBy('views')">views</button>
-            <button ng-click="sortBy('datetaken')">date taken</button>
-            <button ng-click="sortBy('dateupload')">date uploaded</button>
-            <button ng-click="sortBy('owner')">owner</button>
+            <button ng-click="sortBy('views')">
+                <span>views</span>
+                <span ng-show="sortUsing == 'views' && !reverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortUsing == 'views' && reverse" class="fa fa-caret-up"></span>
+            </button>
+            <button ng-click="sortBy('datetaken')">
+                <span>date taken</span>
+                <span ng-show="sortUsing == 'datetaken' && !reverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortUsing == 'datetaken' && reverse" class="fa fa-caret-up"></span>
+            </button>
+            <button ng-click="sortBy('dateupload')">
+                <span>date uploaded</span>
+                <span ng-show="sortUsing == 'dateupload' && !reverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortUsing == 'dateupload' && reverse" class="fa fa-caret-up"></span>
+            </button>
+            <button ng-click="sortBy('owner')">
+                <span></span>owner</span>
+                <span ng-show="sortUsing == 'owner' && !reverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortUsing == 'owner' && reverse" class="fa fa-caret-up"></span>
+            </button>
         </div>
         <ul>
             <li ng-repeat="ele in results | orderBy:propertyName:reverse" ng-click="tagDetails(results.indexOf(ele))">

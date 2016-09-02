@@ -6,7 +6,7 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state',
         $scope.results = flickrSrvc.searchResults;
         $scope.searchTerms = flickrSrvc.searchTerms;
         $scope.itemsNum = 1;
-        $scope.pageNum = 1;
+        $scope.pageNum = 1; // default
 
         // submit the search form
         $scope.submit = function() {
@@ -27,7 +27,7 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state',
         }
 
         // sorting method
-        $scope.propertyName = 'views';
+        $scope.propertyName = 'views'; // default
         $scope.reverse = true;
         $scope.sortBy = function(propertyName) {
             $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;

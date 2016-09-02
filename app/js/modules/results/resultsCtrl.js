@@ -5,7 +5,7 @@ flickr.controller('resultsCtrl', ['flickrSrvc', '$scope', '$timeout',
 
         $scope.results = [];
         $scope.pagination = false;
-        $scope.itemsNum = 20;
+        $scope.itemsNum = 20; // default
         $scope.pageNum = 1;
 
 
