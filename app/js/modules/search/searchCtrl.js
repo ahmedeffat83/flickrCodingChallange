@@ -5,7 +5,6 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state',
 
         $scope.results = flickrSrvc.searchResults;
         $scope.searchTerms = flickrSrvc.searchTerms;
-
         $scope.itemsNum = 1;
         $scope.pageNum = 1;
 

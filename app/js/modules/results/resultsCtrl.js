@@ -4,9 +4,6 @@ flickr.controller('resultsCtrl', ['flickrSrvc', '$scope', '$timeout',
     'use strict';
 
         $scope.results = [];
-        //$scope.searchTerm = flickrSrvc.searchTerm;
-
-
         $scope.pagination = false;
         $scope.itemsNum = 20;
         $scope.pageNum = 1;
