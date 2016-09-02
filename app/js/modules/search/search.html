@@ -1,0 +1,25 @@
+<div>
+    <form ng-submit="submit()">
+        <input type="text" ng-model="seachTerm" placeholder="search flickr" />
+        <input type="text" ng-model="user" placeholder="user ID" />
+        <button type="submit" ng-disabled="!seachTerm">search</button>
+    </form>
+
+    <div ng-if="results">
+        <div>
+            <button ng-click="sortBy('views')" ng-class="{reverse: reverse}">views</button>
+            <button ng-click="sortBy('datetaken')" ng-class="{reverse: reverse}">date taken</button>
+            <button ng-click="sortBy('dateupload')" ng-class="{reverse: reverse}">date uploaded</button>
+            <button ng-click="sortBy('owner')" ng-class="{reverse: reverse}">owner</button>
+        </div>
+        <ul>
+            <li ng-repeat="ele in results | orderBy:propertyName:reverse" ng-click="tagDetails($index)">
+                <img ng-src="{{ele.url_q}}" />
+                <div>{{ele.owner}}</div>
+                <div>{{ele.dateupload}}</div>
+                <div>{{ele.datetaken}}</div>
+                <div>{{ele.views}}</div>
+            </li>
+        </ul>
+    </div>
+</div>

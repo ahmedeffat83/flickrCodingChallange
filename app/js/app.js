@@ -7,12 +7,12 @@ var flickr = angular.module('flickr', ['ui.router'])
 	$stateProvider
 		.state('search', {
 		url: '/',
-		templateUrl: './js/modules/form/search.html',
+		templateUrl: './js/modules/search/search.html',
 		controller: 'searchCtrl'
 	})
 	.state('results', {
 		url: '/results',
-		templateUrl: './js/modules/result/results.html',
+		templateUrl: './js/modules/results/results.html',
 		controller: 'resultsCtrl'
 	});
 
