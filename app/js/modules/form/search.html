@@ -1,0 +1,25 @@
+<div>
+    <form ng-submit="submit()">
+        <input type="text" ng-model="seachTerm" placeholder="search flickr" />
+        <input type="text" ng-model="user" placeholder="user ID" />
+        <button type="submit">search</button>
+    </form>
+
+    <div ng-if="results">
+        <div>
+            <button>views</button>
+            <button>date taken</button>
+            <button>date uploaded</button>
+            <button>owner</button>
+        </div>
+        <ul>
+            <li ng-repeat="ele in results" ng-click="tagDetails($index)">
+                <img ng-src="{{ele.photos.photo[0].url_q}}" />
+                <div>{{ele.photos.photo[0].owner}}</div>
+                <div>{{ele.photos.photo[0].dateupload}}</div>
+                <div>{{ele.photos.photo[0].datetaken}}</div>
+                <div>{{ele.photos.photo[0].views}}</div>
+            </li>
+        </ul>
+    </div>
+</div>

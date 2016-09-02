@@ -5,15 +5,15 @@ var flickr = angular.module('flickr', ['ui.router'])
 
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
-		.state('form', {
+		.state('search', {
 		url: '/',
-		templateUrl: './js/modules/form/form.html',
-		controller: 'formCtrl'
+		templateUrl: './js/modules/form/search.html',
+		controller: 'searchCtrl'
 	})
-	.state('result', {
-		url: '/result',
-		templateUrl: './js/modules/result/result.html',
-		controller: 'resultCtrl'
+	.state('results', {
+		url: '/results',
+		templateUrl: './js/modules/result/results.html',
+		controller: 'resultsCtrl'
 	});
 
 }])

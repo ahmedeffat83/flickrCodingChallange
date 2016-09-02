@@ -1,14 +1,17 @@
-flickr.controller('formCtrl', ['$scope', '$http', '$timeout',
-    function($scope, $http, $timeout){
+flickr.service('flickrSrvc', ['$http',
+    function($http) {
 
-    'use strict';
+        'use strict';
 
-        $scope.results = [];
+        this.searchResults = [];
+        this.searchTerms = [];
+        this.selectedTag = null;
+        this.user = null;
 
 
 
-        $scope.search = function(pageNum) {
-            $http({
+        this.searchFlickr = function(tag, user, items, page) {
+            return $http({
                 method: 'GET',
                 url: 'https://api.flickr.com/services/rest',
                 params: {
@@ -16,21 +19,19 @@ flickr.controller('formCtrl', ['$scope', '$http', '$timeout',
                     api_key: '6a6bfe53444e7fa7db4028587ccf49c0',
                     format: "json",
                     nojsoncallback: 1,
-                    tags: $scope.seachField,
-                    user_id: $scope.user,
+                    tags: tag,
+                    user_id: user,
                     sort: 'interestingness-desc',
-                    per_page: '1',
+                    per_page: items,
                     extras: 'date_upload, date_taken, owner_name, views, url_q',
-                    page: pageNum
+                    page: page
                 }
-            }).success(function(data){
+            }).success(function(data) {
                 //console.log(JSON.stringify(data))
-                $scope.results = data;
-                pagination();
-                //console.log("last: " + $scope.lastPage)
             }).error(function(error){
                 console.warn(error)
             })
         }
-	
-}]);
+
+    }
+    ]);

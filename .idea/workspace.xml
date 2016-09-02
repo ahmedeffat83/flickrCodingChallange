@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c8870e-3540-44db-93c7-9c1396918f0f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/modules/form/search.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/modules/form/searchCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/modules/result/results.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/modules/result/resultsCtrl.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/modules/form/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/modules/form/formCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/modules/result/result.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/modules/result/resultCtrl.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/modules/form/form.html" afterPath="$PROJECT_DIR$/app/js/modules/form/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/modules/form/formCtrl.js" afterPath="$PROJECT_DIR$/app/js/modules/form/formCtrl.js" />
     </list>
     <ignored path="flickr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,41 +35,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="searchCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/modules/form/searchCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+            <state relative-caret-position="135">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/modules/form/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="225">
+              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/modules/form/formCtrl.js">
+      <file leaf-file-name="resultsCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/modules/result/resultsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="330">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/js/modules/form/form.html">
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/modules/result/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flickrSrvc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/modules/services/flickrSrvc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -71,16 +87,30 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/js/app.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/js/modules/form/formCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/modules/form/form.html" />
+        <option value="$PROJECT_DIR$/app/js/modules/result/result.html" />
+        <option value="$PROJECT_DIR$/app/js/modules/result/resultCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/modules/form/formCtrl.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/js/modules/form/search.html" />
+        <option value="$PROJECT_DIR$/app/js/modules/result/results.html" />
+        <option value="$PROJECT_DIR$/app/js/modules/result/resultsCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/modules/services/flickrSrvc.js" />
+        <option value="$PROJECT_DIR$/app/js/modules/form/searchCtrl.js" />
       </list>
     </option>
   </component>
@@ -169,6 +199,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flickr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flickr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,12 +378,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472486572448</updated>
       <workItem from="1472486582239" duration="1423000" />
-      <workItem from="1472657967213" duration="11835000" />
+      <workItem from="1472657967213" duration="22983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13258000" />
+    <option name="totallyTimeSpent" value="24406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="792" extended-state="0" />
@@ -336,6 +392,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -347,7 +404,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -383,14 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/modules/result/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../IBM/2016/_src/BlueStudio2/BlueStudio/www/templates/walkanim.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -401,32 +449,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state relative-caret-position="330">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="150">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/modules/form/formCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/js/modules/form/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/modules/form/form.html">
+    <entry file="file://$PROJECT_DIR$/app/js/modules/result/results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/modules/result/resultsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/modules/services/flickrSrvc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/modules/form/searchCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding />
         </state>
       </provider>
