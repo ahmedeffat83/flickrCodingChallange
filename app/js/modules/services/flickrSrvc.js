@@ -1,13 +1,16 @@
-flickr.service('flickrSrvc', ['$http',
-    function($http) {
+flickr.service('flickrSrvc', ['$http', '$rootScope',
+    function($http, $rootScope) {
 
         'use strict';
 
+        this.successfulSearch = false;
         this.searchResults = [];
         this.searchTerms = [];
         this.selectedTag = null;
         this.user = null;
-
+        // Error handeling
+        $rootScope.errors = $rootScope.errors || [];
+        $rootScope.currentError = null;
 
 
         this.searchFlickr = function(tag, user, items, page) {
@@ -28,9 +31,9 @@ flickr.service('flickrSrvc', ['$http',
                 }
             }).success(function(data) {
                 //console.log(JSON.stringify(data))
-            }).error(function(error){
-                console.warn(error)
-            })
+            }).error(function(error) {
+                console.log(error.message);
+            });
         }
 
     }
