@@ -6,23 +6,30 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state', '$rootScope',
         $scope.results = flickrSrvc.searchResults;
         $scope.itemsNum = 1;
         $scope.pageNum = 1; // default
+        $scope.preventWrongSubmit = false;
 
         // submit the search form
         $scope.submit = function() {
-            flickrSrvc.searchFlickr($scope.seachTerm, $scope.user, $scope.itemsNum, $scope.pageNum)
-                .success(function(data) {
-                    if(data.photos.photo.length) {
-                        flickrSrvc.searchResults.push(data.photos.photo[0]);
-                        flickrSrvc.searchTerms.push($scope.seachTerm);
-                        flickrSrvc.user = $scope.user;
-                        $scope.seachTerm = "";
-                        flickrSrvc.successfulSearch = true;
-                        $rootScope.currentError = null;
-                    } else {
-                        $rootScope.currentError = ("No search results found, please try again");
-                        console.warn($rootScope.currentError);
-                    }
+            if(!$scope.preventWrongSubmit) {
+                $scope.preventWrongSubmit = true;
+                flickrSrvc.searchFlickr($scope.seachTerm, $scope.user, $scope.itemsNum, $scope.pageNum)
+                    .success(function (data) {
+                        if (data.photos.photo.length) {
+                            flickrSrvc.searchResults.push(data.photos.photo[0]);
+                            flickrSrvc.searchTerms.push($scope.seachTerm);
+                            flickrSrvc.user = $scope.user;
+                            $scope.seachTerm = "";
+                            flickrSrvc.successfulSearch = true;
+                            $rootScope.currentError = null;
+                        } else {
+                            $rootScope.currentError = ("No search results found, please try again");
+                            console.warn($rootScope.currentError);
+                        }
+                        $scope.preventWrongSubmit = false;
+                    }).error(function(error) {
+                        $scope.preventWrongSubmit = false;
                 })
+            }
         }
 
         // display related tiles based on the tile's search tag
