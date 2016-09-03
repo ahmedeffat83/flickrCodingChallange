@@ -9,7 +9,6 @@ flickr.service('flickrSrvc', ['$http', '$rootScope',
         this.selectedTag = null;
         this.user = null;
         // Error handeling
-        $rootScope.errors = $rootScope.errors || [];
         $rootScope.currentError = null;
 
 
@@ -32,7 +31,10 @@ flickr.service('flickrSrvc', ['$http', '$rootScope',
             }).success(function(data) {
                 //console.log(JSON.stringify(data))
             }).error(function(error) {
-                console.log(error.message);
+                $rootScope.currentError = ("Error retrieving JSON data");
+                console.warn($rootScope.currentError);
+
+
             });
         }
 

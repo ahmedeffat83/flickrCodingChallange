@@ -1,40 +1,58 @@
-<div>
-    <form ng-submit="submit()">
-        <input type="text" ng-model="seachTerm" placeholder="search flickr" ng-required="required" />
-        <input type="text" ng-model="user" placeholder="user ID" />
-        <button type="submit" ng-disabled="!seachTerm">search</button>
-    </form>
 
-    <div ng-if="results">
-        <div>
-            <button ng-click="sortBy('views')">
-                <span>views</span>
-                <span ng-show="sortUsing == 'views' && !reverse" class="fa fa-caret-down"></span>
-                <span ng-show="sortUsing == 'views' && reverse" class="fa fa-caret-up"></span>
-            </button>
-            <button ng-click="sortBy('datetaken')">
-                <span>date taken</span>
-                <span ng-show="sortUsing == 'datetaken' && !reverse" class="fa fa-caret-down"></span>
-                <span ng-show="sortUsing == 'datetaken' && reverse" class="fa fa-caret-up"></span>
-            </button>
-            <button ng-click="sortBy('dateupload')">
-                <span>date uploaded</span>
-                <span ng-show="sortUsing == 'dateupload' && !reverse" class="fa fa-caret-down"></span>
-                <span ng-show="sortUsing == 'dateupload' && reverse" class="fa fa-caret-up"></span>
-            </button>
-            <button ng-click="sortBy('owner')">
-                <span></span>owner</span>
-                <span ng-show="sortUsing == 'owner' && !reverse" class="fa fa-caret-down"></span>
-                <span ng-show="sortUsing == 'owner' && reverse" class="fa fa-caret-up"></span>
-            </button>
+<nav class="navbar navbar-default">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a ui-sref="search" class="navbar-brand">
+                <span>Flickr search challange</span>
+            </a>
         </div>
-        <ul>
-            <li ng-repeat="ele in results | orderBy:propertyName:reverse" ng-click="tagDetails(results.indexOf(ele))">
-                <img ng-src="{{ele.url_q}}" />
-                <div>{{ele.owner}}</div>
-                <div>{{ele.dateupload}}</div>
-                <div>{{ele.datetaken}}</div>
-                <div>{{ele.views}}</div>
+        <div class="collapse navbar-collapse">
+            <form ng-submit="submit()" class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" ng-model="seachTerm" placeholder="search flickr" ng-required="required" class="form-control" />
+                    <input type="text" ng-model="user" placeholder="user ID" class="form-control" />
+                </div>
+                <button type="submit" ng-disabled="!seachTerm" class="btn btn-default">search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div ng-if="results.length" class="searchResultsWrapper" role="group">
+        <div class="flickrBtnsContainer">
+            <div class="btn-group flickrBtns">
+                <button ng-click="sortBy('views')" ng-disabled="results.length < 2" type="button" class="btn btn-default">
+                    <span>views</span>
+                    <span ng-show="sortUsing == 'views' && !reverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortUsing == 'views' && reverse" class="fa fa-caret-down"></span>
+                </button>
+                <button ng-click="sortBy('datetaken')" ng-disabled="results.length < 2" type="button" class="btn btn-default">
+                    <span>date taken</span>
+                    <span ng-show="sortUsing == 'datetaken' && !reverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortUsing == 'datetaken' && reverse" class="fa fa-caret-down"></span>
+                </button>
+                <button ng-click="sortBy('dateupload')" ng-disabled="results.length < 2" type="button" class="btn btn-default">
+                    <span>date uploaded</span>
+                    <span ng-show="sortUsing == 'dateupload' && !reverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortUsing == 'dateupload' && reverse" class="fa fa-caret-down"></span>
+                </button>
+                <button ng-click="sortBy('owner')" ng-disabled="results.length < 2" type="button" class="btn btn-default">
+                    <span>owner</span>
+                    <span ng-show="sortUsing == 'owner' && !reverse" class="fa fa-caret-up"></span>
+                    <span ng-show="sortUsing == 'owner' && reverse" class="fa fa-caret-down"></span>
+                </button>
+            </div>
+        </div>
+        <ul class="tilesContainer searchResults">
+            <li ng-repeat="ele in results | orderBy:sortUsing:reverse" ng-click="tagDetails(results.indexOf(ele))">
+                <div class="tileImg"><img ng-src="{{ele.url_q}}" /></div>
+                <div class="tileContent">
+                    <div><label>Owner:</label><span>{{ele.owner}}</span></div>
+                    <div><label>Date uploaded:</label><span>{{ele.dateupload}}</span></div>
+                    <div><label>Date taken:</label><span>{{ele.datetaken}}</span></div>
+                    <div><label>Views:</label><span>{{ele.views}}</span></div>
+                </div>
             </li>
         </ul>
     </div>

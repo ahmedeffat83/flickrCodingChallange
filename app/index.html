@@ -1,4 +1,4 @@
-<html ng-app="flickr">
+<html ng-app="flickr" ng-cloak>
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
@@ -8,21 +8,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Flickr FE challange</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div ui-view></div>
+<div class=""></div>
+  <div ui-view class="container-fluid"></div>
 
-  <div class="errorsWrapper" ng-if="currentError">
-    {{currentError}}
-  </div>
 
+  <div class="alert alert-danger" role="alert" ng-if="currentError">{{currentError}}</div>
+
+
+  <script src="https://use.fontawesome.com/38cb023b6b.js"></script>
   <script src="js/lib/angular/angular.min.js"></script>
   <script src="js/lib/angular/angular-ui-router.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/modules/services/exceptionHandlerSrvc.js"></script>
   <script src="js/modules/services/flickrSrvc.js"></script>
   <script src="js/modules/search/searchCtrl.js"></script>
   <script src="js/modules/results/resultsCtrl.js"></script>

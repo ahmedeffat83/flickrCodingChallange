@@ -1,17 +1,42 @@
-<div>
-    <a ui-sref="search">Back to search</a>
-    <div ng-if="results">
-        <ul>
-            <li ng-repeat="ele in results">
-                <img ng-src="{{ele.url_q}}" />
-            </li>
-        </ul>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a ui-sref="search" class="navbar-brand">
+                <span class="fa fa-arrow-left"></span>
+                <span>Flickr search challange</span>
+            </a>
+        </div>
     </div>
-    <div ng-if="pagination">
-        <button ng-click="paginate('first')" ng-disabled="pageNum == 1">first</button>
-        <button ng-click="paginate('prev')" ng-disabled="pageNum == 1">previous</button>
-        page: {{pageNum}}
-        <button ng-click="paginate('next')" ng-disabled="pageNum == lastPage">next</button>
-        <button ng-click="paginate('last')" ng-disabled="pageNum == lastPage">last</button>
+</nav>
+
+<div ng-if="results">
+    <ul class="tilesContainer">
+        <li ng-repeat="ele in results">
+            <img ng-src="{{ele.url_q}}" />
+        </li>
+    </ul>
+</div>
+
+<div ng-if="pagination" class="flickrBtnsContainer flickrPagination">
+    <div class="btn-group flickrBtns">
+
+        <button ng-click="paginate('first')" ng-disabled="pageNum == 1" type="button" class="btn btn-default">
+            <span class="fa fa-angle-double-left"></span>
+            <span>first</span>
+        </button>
+        <button ng-click="paginate('prev')" ng-disabled="pageNum == 1" type="button" class="btn btn-default">
+            <span class="fa fa-angle-left"></span>
+            <span>previous</span>
+        </button>
+        <div><span>{{pageNum}}</span></div>
+        <button ng-click="paginate('next')" ng-disabled="pageNum == lastPage" type="button" class="btn btn-default">
+            <span>next</span>
+            <span class="fa fa-angle-right"></span>
+        </button>
+        <button ng-click="paginate('last')" ng-disabled="pageNum == lastPage" type="button" class="btn btn-default">
+            <span>last</span>
+            <span class="fa fa-angle-double-right"></span>
+        </button>
     </div>
 </div>
