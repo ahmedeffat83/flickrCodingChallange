@@ -1,9 +1,7 @@
 flickr.service('flickrSrvc', ['$http', '$rootScope',
     function($http, $rootScope) {
-
         'use strict';
 
-        this.successfulSearch = false;
         this.searchResults = [];
         this.searchTerms = [];
         this.users = [];
@@ -34,10 +32,7 @@ flickr.service('flickrSrvc', ['$http', '$rootScope',
             }).error(function(error) {
                 $rootScope.currentError = ("Error retrieving JSON data");
                 console.warn($rootScope.currentError);
-
-
             });
         }
-
     }
-    ]);
+]);

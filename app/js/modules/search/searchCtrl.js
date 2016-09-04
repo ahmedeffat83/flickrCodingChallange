@@ -1,7 +1,6 @@
 flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state', '$rootScope',
     function(flickrSrvc, $scope, $state, $rootScope){
-
-    'use strict';
+        'use strict';
 
         $scope.results = flickrSrvc.searchResults;
         $scope.itemsNum = 1;
@@ -20,7 +19,6 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state', '$rootScope',
                             flickrSrvc.users.push($scope.user);
                             $scope.seachTerm = "";
                             $scope.user = "";
-                            flickrSrvc.successfulSearch = true;
                             $rootScope.currentError = null;
                         } else {
                             $rootScope.currentError = ("No search results found, please try again");
@@ -47,6 +45,4 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state', '$rootScope',
             $scope.reverse = ($scope.sortUsing === sortUsing) ? !$scope.reverse : false;
             $scope.sortUsing = sortUsing;
         };
-
-
 }]);
