@@ -6,8 +6,9 @@ flickr.service('flickrSrvc', ['$http', '$rootScope',
         this.successfulSearch = false;
         this.searchResults = [];
         this.searchTerms = [];
+        this.users = [];
         this.selectedTag = null;
-        this.user = null;
+        this.selectedUser = null
         // Error handeling
         $rootScope.currentError = null;
 

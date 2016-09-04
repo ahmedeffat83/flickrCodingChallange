@@ -17,8 +17,9 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state', '$rootScope',
                         if (data.photos.photo.length) {
                             flickrSrvc.searchResults.push(data.photos.photo[0]);
                             flickrSrvc.searchTerms.push($scope.seachTerm);
-                            flickrSrvc.user = $scope.user;
+                            flickrSrvc.users.push($scope.user);
                             $scope.seachTerm = "";
+                            $scope.user = "";
                             flickrSrvc.successfulSearch = true;
                             $rootScope.currentError = null;
                         } else {
@@ -35,6 +36,7 @@ flickr.controller('searchCtrl', ['flickrSrvc', '$scope', '$state', '$rootScope',
         // display related tiles based on the tile's search tag
         $scope.tagDetails = function(index) {
             flickrSrvc.selectedTag = flickrSrvc.searchTerms[index];
+            flickrSrvc.selectedUser = flickrSrvc.users[index];
             $state.go("results");
         }
 

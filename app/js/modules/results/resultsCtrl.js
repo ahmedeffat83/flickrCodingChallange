@@ -11,7 +11,7 @@ flickr.controller('resultsCtrl', ['flickrSrvc', '$scope', '$state',
 
 
             // displaying tiles according to the selected tile's tag
-            flickrSrvc.searchFlickr(flickrSrvc.selectedTag, flickrSrvc.user, $scope.itemsNum, $scope.pageNum)
+            flickrSrvc.searchFlickr(flickrSrvc.selectedTag, flickrSrvc.selectedUser, $scope.itemsNum, $scope.pageNum)
                 .success(function (data) {
                     console.log(JSON.stringify(data.photos.photo));
                     $scope.results = data.photos.photo;
