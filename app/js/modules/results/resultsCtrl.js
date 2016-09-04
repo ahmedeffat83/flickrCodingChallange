@@ -13,7 +13,7 @@ flickr.controller('resultsCtrl', ['flickrSrvc', '$scope', '$state',
             // displaying tiles according to the selected tile's tag
             flickrSrvc.searchFlickr(flickrSrvc.selectedTag, flickrSrvc.selectedUser, $scope.itemsNum, $scope.pageNum)
                 .success(function (data) {
-                    console.log(JSON.stringify(data.photos.photo));
+                    //console.log(JSON.stringify(data.photos.photo));
                     $scope.results = data.photos.photo;
                     $scope.pagination = true;
                     $scope.lastPage = data.photos.pages;
@@ -36,7 +36,7 @@ flickr.controller('resultsCtrl', ['flickrSrvc', '$scope', '$state',
                     default:
                         $scope.pageNum = 1;
                 }
-                flickrSrvc.searchFlickr(flickrSrvc.selectedTag, flickrSrvc.user, $scope.itemsNum, $scope.pageNum)
+                flickrSrvc.searchFlickr(flickrSrvc.selectedTag, flickrSrvc.selectedUser, $scope.itemsNum, $scope.pageNum)
                     .success(function (data) {
                         $scope.results = data.photos.photo;
                         $scope.lastPage = data.photos.pages;
